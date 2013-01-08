@@ -34,6 +34,7 @@ def sqlsoup():
 # template for the strange additional data field from wikiarguments/questions
 ADDITIONAL_DATA_TEMPLATE = 'O:8:"stdClass":4:{{s:7:"percPro";i:0;s:7:"percCon";i:0;s:11:"numCheckIns";i:0;s:4:"tags";a:{}:{{{}}}}}'
 
+
 def create_additional_data(tags):
     tag_entries = []
     for num, tag in enumerate(tags):
@@ -55,3 +56,8 @@ def test_additional_data():
     e = create_additional_data(tags)
     assert e == EXAMPLE_ADDITIONAL_DATA
 
+
+def truncate_database():
+    session.execute("truncate tags")
+    session.execute("truncate questions")
+    session.commit()
