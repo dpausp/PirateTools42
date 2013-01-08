@@ -13,11 +13,11 @@ import re
 import time
 from pprint import pformat
 
+sys.path.append("../../")
+
 import piratetools42.logconfig
 logg = piratetools42.logconfig.configure_logging("wikiarguments-spickerrr-import.log")
 from piratetools42.wikiargumentsdb import create_additional_data, session, Question, Tag
-
-sys.path.append("../../")
 
 # config
 

@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 
 from sqlalchemy.ext.declarative import declarative_base
 
-SQLALCHEMY_CONNECTION = "mysql+oursql://wikiarguments:wikiarguments@localhost/wikiarguments"
+from piratetools42.localconfig import SQLALCHEMY_CONNECTION
 
 engine = create_engine(SQLALCHEMY_CONNECTION, echo=False)
 metadata = MetaData()
