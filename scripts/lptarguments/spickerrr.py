@@ -1,8 +1,7 @@
 #/usr/bin/python3
 #coding: utf8
 
-"""
-Read JSON antrag files ("Antragsbücher") from pirat.ly/spicker and write content to the wikiarguments DB 
+"""Read JSON antrag files ("Antragsbücher") from pirat.ly/spicker and write content to the wikiarguments DB
 STATUS: works, some antraege need custom fixes for strange unicode chars (see BAD_ANTRAEGE_FIXES below)
 """
 
@@ -25,6 +24,7 @@ WIKI_BASE_URI = "http://wiki.piratenpartei.de/"
 
 
 HTML_ANTRAGS_TMPL = """\
+{fulltitle_html}
 <h2>Wiki</h2>
 <a href="{info_url}">{info_url}</a>
 <h2>Pirate Feedback</h2>
@@ -43,7 +43,7 @@ CODE_RE = re.compile("(\w+)(\d\d\d)")
 
 # we have to apply fixes for some 'antraege' when inserting into the DB
 BAD_ANTRAEGE_FIXES = {
-"PP047": lambda s: s.replace("\u2191", "^"), 
+"PP047": lambda s: s.replace("\u2191", "^"),
 "PP092": lambda s: s.replace("\u2029", " ")}
 
 # special codes for the LPT. Map BPT codes to LPT codes.
@@ -55,15 +55,11 @@ CODE_TRANSLATION = {
 def translate_antrags_code(antrag):
     code, number = CODE_RE.match(antrag["id"]).groups()
     translated = CODE_TRANSLATION.get(code, code)
-    antrag["id"] = translated + number   
+    antrag["id"] = translated + number
     return antrag
 
 
 def antrag_details_prepare_html(antrag):
-    antrag["text"] = antrag["text"].rstrip("</p> </div> <p><br /> </p>")
-    antrag.setdefault("lqfb_url", "-")
-    antrag.setdefault("motivation", "-")
-    antrag.setdefault("owner", "-")
     html = HTML_ANTRAGS_TMPL.format(**antrag)
     fix = BAD_ANTRAEGE_FIXES.get(antrag["id"])
     if fix:
@@ -71,24 +67,38 @@ def antrag_details_prepare_html(antrag):
     return html
 
 
-def insert_antrag(antrag_json):
-    js = antrag_json
-    details = antrag_details_prepare_html(js)
-    id_ = js["id"]
-    tags = [id_, "LPT13.1", js["kind"]]
-    additional = create_additional_data(tags)
-    title = id_ + ":" + js["title"]
-    if len(title) > 100:
+def prepare_antrag(antrag):
+    a = antrag.copy()
+    title = a["id"] + ":" + a["title"]
+    a["text"] = a["text"].rstrip("</p> </div> <p><br /> </p>")
+    a["title"] = title
+    a.setdefault("lqfb_url", "-")
+    a.setdefault("motivation", "-")
+    a.setdefault("owner", "-")
+    if len(a["title"]) > 100:
+        logg.warn("%s: title too long: '%s'; shortened", a["id"], title)
         # shorten title because wikiarguments supports only 100 chars
         # add full title to details
-        details = "<h2>Voller Titel</h2><br />{}<br />{}".format(title, details)
-        title = title[:97] + "..."
-    question = Question(title=title, url=id_, details=details, dateAdded=time.time(), 
+        a["fulltitle_html"] = "<h2>Voller Titel</h2><br />{}<br />".format(title)
+        a["shorttitle"] = title[:97] + "..."
+    else:
+        a["fulltitle_html"] = ""
+        a["shorttitle"] = title
+    return a
+
+
+def insert_antrag(antrag):
+    a = prepare_antrag(antrag)
+    details = antrag_details_prepare_html(a)
+    id_ = a["id"]
+    tags = [id_, "LPT13.1", a["kind"]]
+    additional = create_additional_data(tags)
+    question = Question(title=a["shorttitle"], url=id_, details=details, dateAdded=time.time(),
                         score=0, scoreTrending=0, scoreTop=0, userId=2, additionalData=additional)
     session.add(question)
     session.commit()
     # insert title words in Tag table because this table is used for question searches
-    title_words = js["title"].split()
+    title_words = a["title"].split()
     for tag in tags + title_words:
         tag_obj = Tag(tag=tag, questionId=question.questionId)
         session.add(tag_obj)
@@ -102,7 +112,8 @@ def update_antrag(antrag):
     if question:
         logg.info("Antrag %s existiert schon", id_)
         # update details if changed. Other fields must not change and are ignored
-        details = antrag_details_prepare_html(antrag)
+        a = prepare_antrag(antrag)
+        details = antrag_details_prepare_html(a)
         if question.details != details:
             diff = list(difflib.Differ().compare(question.details.split("\n"), details.split("\n")))
             logg.info("Antragsdetails von %s haben sich verändert, Unterschiede:\n %s", id_, pformat(diff))
@@ -130,12 +141,12 @@ def update_antragsbuch(filename):
             session.rollback()
         if diff:
             updated[antrag["id"]] = diff
-            
+
     logg.info("---- Antragsbuch-Update beendet ----")
     if updated:
-        logg.info("Geänderte Anträge:\n%s", pformat(updated))
+        logg.info("%s geänderte Anträge:\n%s", len(updated), pformat(updated))
     if failed:
-        logg.warn("Es traten Fehler auf:\n%s", pformat(failed))
+        logg.warn("Es traten Fehler bei %s Anträgen auf:\n%s", len(failed), pformat(failed))
     return updated, failed
 
 
