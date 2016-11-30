@@ -3,9 +3,9 @@
 import logging
 import logging.handlers
 
-def configure_logging(log_filename=None):
+def configure_logging(log_filename=None, level=logging.DEBUG):
     logg = logging.getLogger()
-    logg.setLevel(logging.DEBUG)
+    logg.setLevel(level)
     logging.getLogger("sqlalchemy.engine").setLevel(logging.WARN)
     log_format = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
     stream_log = logging.StreamHandler()

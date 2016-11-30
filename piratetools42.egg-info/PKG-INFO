@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: piratetools42
+Version: 0.0dev0-
+Summary: various pirate tools...
+Home-page: UNKNOWN
+Author: Tobias Stenzel
+Author-email: tobias.stenzel@piraten-oberpfalz.de
+License: GNU General Public License v3 (GPLv3)
+Description: UNKNOWN
+Keywords: piraten
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4

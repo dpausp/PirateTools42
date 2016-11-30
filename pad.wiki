@@ -1,0 +1,253 @@
+'''<u>= Protokoll ab hier = (Zeile nicht löschen!)</u>'''
+
+Vorstandssitzung BzV Oberpfalz vom 13.04.2015
+=============================================
+
+
+Ort, Datum und Zeit der Sitzung
+-------------------------------
+*Ort: Mumble NRW, Raum Bayern-&gt;Oberpfalz
+*Beginn: 20:30 Uhr
+*Ende: 22:00 Uhr
+
+Anwesende
+---------
+
+### Anwesende Vorstände
+*Vorsitzender: Steffen Heuer
+*Stellv. Vorsitzender: Tobias Stenzel
+*Schatzmeister: Andreas Hartl
+*<s>Pol. Geschäftsführer: Sebastian Schwarzweller</s> ?
+*<s>Generalsekretär: Christian Kwasny</s> entschuldigt
+
+### Beauftragte
+*keine
+
+### Gäste
+*5
+
+### Prokoll und Sitzungsleitung
+*Protokoll schreibt heute: Tobias
+*Sitzungsleiter ist heute: Steffen
+*Verantwortlicher für die Aufnahme ist heute: Tobias
+
+
+Tagesordnung
+============
+
+
+Aktivitäten Vorstände
+---------------------
+
+### Vorsitzender (Steffen Heuer)
+*02.04. LaVoSi
+*06.04. Bezirksvorständemumble/LV-Kampagnenmumble
+*09.04. Attac/Sekors Vortrag Datenschutz
+*Orgafoo StopTTIP REG; PMs, Reiseverordnungsmumble, Inhaltliche Zuarbeit LV;&nbsp;
+
+### Stellv. Vorsitzender (Tobias Stenzel)
+*06.04. Bezirksvorständemumble/LV-Kampagnenmumble
+*Website-Umzug Cham/Weiden
+
+### Schatzmeister (Andreas Hartl)
+*Datenaufbereitung
+
+### Politischer Geschäftsführer (Sebastian Schwarzweller)
+*nicht da
+
+### Generalsekretär (Christian Kwasny)
+*nicht da
+
+
+Aktivitäten der Beauftragten und der Kreise
+-------------------------------------------
+
+### AM/AS
+*ruhig
+
+### CHA
+*Samstag - Stammtisch; keine Gäste; nächstes Mal einladen
+
+### NM
+*tun Dinge; Buchungsdaten liegen vor
+
+### R
+*09.04. Sekor als Vortragsgast im Plenum von Attac Regensburg (Raum war voll)
+*Termine:
+*18.04. StopTTIP-Demo!&nbsp;
+*23.04. Welttag des Buches - Verteilaktion
+
+### SAD
+*Freifunk läuft
+*STOP-TTIP-Stand 18.4
+
+### TIR
+*unbekannt
+
+### WEN/NEW
+*s. ML wollen Website [http://www.piraten-wen.de/ http://www.piraten-wen.de/] / [http://piraten-weiden.de http://piraten-weiden.de] auf Bezirkswebsite umleiten (Impressum veraltet)
+
+Aktuelle Kennzahlen
+-------------------
+
+&lt;!-- Finanzen, Mitgliederzahlen, usw.) --&gt;
+*Kontostand:20.671,78 EUR
+*
+**davon frei verfügbar:
+*Barkasse:180 Eur
+
+
+Nächstes Präsenztreffen
+-----------------------
+
+*wir waren bisher in Regensburg, Cham, Regensburg und nun wollen wir nach?
+*Themen: Kampagne, Zukunft
+*Schwandorf? - z.B. Cafe Dali in Nabburg
+*Zeitraum: so in 1.5 Monaten: Verantw.: Steffen - plant das in Rücksprache mit Chris
+
+
+Website-Umzug
+-------------
+
+*"Portalseite" für Cham mit Termin- und Newslinks
+**[https://www.piraten-oberpfalz.de/kreise/cham/ https://www.piraten-oberpfalz.de/kreise/cham/]
+*Menü auf der Hauptsptseite mit Kreise / Städte
+*Zuständig Amberg: EscaP hat keine Zugang; vielleicht weiß Dominik es?
+
+
+Anträge
+-------
+
+### #1759: Änderung der Reisekostenregelung
+
+*Antragsteller: Steffen Heuer, Andreas Hartl
+*Antrag eingegangen am 13.04.2015
+
+
+#### Antrag
+
+Die Reisekostenordnung, beschlossen am 22.12.2014, soll wie folgt geändert werden:
+
+In Abschnitt E. 1. werden die Punkte b) und c) wie folgt ersetzt:
+
+b) Bei Benutzung eines PKW gilt: Die Erstattung beträgt 0,30 EUR pro gefahrenem Kilometer. Zum Nachweis ist auf Anforderung durch den Schatzmeister eine Routenplanung der tatsächlich gefahrenen Kilometer vorzulegen.&nbsp;
+
+c) Bei Benutzung eines Motorrades werden 0,13 EUR pro gefahrenem Kilometer erstattet. Die Regelungen des Absatzes b) gelten entsprechend.
+
+#### Begründung&nbsp;
+
+Geänderte Bestimmungen ab 1.1.15, siehe [http://www.bitsammelwanne.de/piraten/20141024-bmf.pdf http://www.bitsammelwanne.de/piraten/20141024-bmf.pdf]
+
+
+#### Abstimmung
+
+*Steffen: ja
+*Tobias: ja
+*Andreas: ja
+*Sebastian:/
+*Christian:/
+
+### #1739: Reisekostenuebernahme Marienbad f. Tina
+
+*[https://redmine.piratenpartei-bayern.de/issues/1739 https://redmine.piratenpartei-bayern.de/issues/1739]
+*Antragssteller: Tina Lorenz
+*Antrag eingegangen am: 06.04.2015
+
+#### Antrag
+
+Reisekostenübernahme für Tina Lorenz fuer die Piratecon in Marienbad vom 15-17. Mai 2015 in Höhe von 201,10€.
+
+
+#### Begründung
+06.04. Anfrage an Tina bzgl. der zu erwartenden Höhe der Kosten gesendet
+
+Tina: Reise mit der Bahn (BC50) plus 1 Uebernachtung im Konferenzhotel ist zusammen 201,10 Euro.
+
+Tina: Ich habe auch einen Vortrag eingereicht (Details siehe unten), damit waeren dann auch
+die Oberpfaelzer Piraten sichtbar und vertreten.
+Lasst mich wissen, was ihr noch von mir braucht, um den Antrag, der
+jetzt hier in der Form recht formlos ist, entscheiden zu koennen.
+LG Tina
+Vortragseinreichung: Local Self-Government in Bavaria: Pitfalls and
+Challenges
+For the past year, Tina Lorenz has been part of a "rainbow coalition"
+that governs the Bavarian city of Regensburg. She will talk about the
+challenges that arise between day-to-day administration and political
+goals, about her plans for the community and she will share anecdotes
+about her first year in local government.
+Tina Lorenz was elected by local Pirates to run for mayor in the city of
+Regensburg, Bavaria in Spring 2014. Since then, she's been a member of a
+large "rainbow coalition" in the Regensburg city council, trying to do
+less harm than the others.
+
+#### Diskussion
+
+*Andreas schlägt vor den Antrag außerhalb der RKO zu behandeln: Zustimmung ok.
+
+
+#### Abstimmung
+
+*Steffen: ja
+*Tobias: ja
+*Andreas: ja
+*Sebastian:/
+*Christian:/
+
+
+####1758: Neue Flyer von Abgefrackt
+[https://redmine.piratenpartei-bayern.de/issues/1758 https://redmine.piratenpartei-bayern.de/issues/1758]
+
+*Antragssteller: Steffen Heuer
+*Antrag eingegangen am: 12.04.2015
+*Umsetzungsverantwortlich: Steffen Heuer
+
+#### Antrag
+
+Der Vorstand BzV Opf. möge beschließen, 1000 Abgefrackt-Flyer zu erwerben. Kosten: 81,71 EUR
+
+#### Begründung
+
+Wir&nbsp; brauchen für die Aktion am 18.04. (TTIP-Demo) neue Flyer. Es&nbsp; wurden&nbsp; von der BI neue erstellt (8seitig) - mit Verweis auf Aarhus!!1!11
+Der Vorstand von REG stimmt zu, dass wir Bedarf haben.&nbsp;
+
+#### Diskussion
+
+Kein Bedarf.
+
+#### Abstimmung
+
+*Steffen: ja
+*Tobias: ja
+*Andreas: ja
+*Sebastian:/
+*Christian:/
+
+Umlaufbeschlüsse
+----------------
+
+*keine
+
+
+Sonstiges
+---------
+*Breitbandversorgung im Bezirk - haben wir jemanden, der sich damit befasst? - unbekannt
+*BzV-Website: was wollen wir als neuen Beitrag drauftun? Was vom Land? (*zwinker*: [https://piratenpartei-bayern.de/2015/04/02/openantrag-unsere-antragsplattform-im-internet/ https://piratenpartei-bayern.de/2015/04/02/openantrag-unsere-antragsplattform-im-internet/] ) - Positiv.&nbsp;
+*Unterstützung durch Bezirk? Empfehlung an LV? Aufruf zur Unterstützung durch Einzelpersonen? Bezirksthema? [http://www.asylrechtsverschaerfung-stoppen.de/?page_id=295&PageSpeed=noscript http://www.asylrechtsverschaerfung-stoppen.de/?page_id=295&amp;PageSpeed=noscript] ; Hintergrund: [http://www.proasyl.de/de/news/detail/news/scharfe_kritik_an_gesetzentwurf_zu_bleiberechts_und_aufenthaltsbeendigung/ http://www.proasyl.de/de/news/detail/news/scharfe_kritik_an_gesetzentwurf_zu_bleiberechts_und_aufenthaltsbeendigung/]
+
+
+Termine
+-------
+
+*18.04. StopTTIP Weiden / Schwandorf / Regensburg - Stand
+*Pressegespräch "BI keinen Drohnen in der Oberpfalz" am 15.04.2015 14 Uhr in Hohenfels - Interessenten bitte melden
+*BI Drohne 09.05.2015 -Friedensmarsch- Interessenten bitte melden!
+
+Nächstes Treffen
+----------------
+*Nächste Vorstandssitzung in 2 Wochen
+*Ort: Mumble-Raum Oberpfalz-&gt;Vorstandssitzung
+*Datum: 27.4.15
+*Zeit: 20:30
+
+
+

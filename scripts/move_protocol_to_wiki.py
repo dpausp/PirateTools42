@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 #coding: utf8
 
 from itertools import cycle, chain, tee, dropwhile, imap
@@ -15,7 +16,7 @@ import mwclient
 
 from piratetools42.padhelpers import download_pad 
 
-logg.basicConfig(level=logg.DEBUG, stream=sys.stdout)
+logg.basicConfig(level=logg.DEBUG, stream=sys.stderr)
 locale.setlocale(locale.LC_ALL, locale.getdefaultlocale())
 
 OFFLINE_SESSION_TYPE = "Offline"
@@ -193,19 +194,18 @@ def move_protocol_to_wiki(session, pad_name_addon=None):
         raise Exception("Mit dem Protokoll-Anfang stimmt was nicht, Datum konnte nicht erkannt werden: {}".format(header))
     day, month, year = [int(e) for e in match.groups()]
     if year < 100:
-        year += 2000 
+        year += 2000
     session_date = date(year=year, month=month, day=day)
     reversed_date = reverse_date_format(session_date)
-    unquote_func = lambda s: s.replace("&gt;", ">").replace("&lt;", "<") 
+    unquote_func = lambda s: s.replace("&gt;", ">").replace("&lt;", "<")
     edit_uri = "http://wiki.piratenpartei.de/wiki//index.php?title={}&action=edit"
     logg.debug("Header ist:\n%s, Protokoll-Datum %s", header, reversed_date)
-    print("Inhalt:")
-    print("-" * 80)
+    logg.info("Inhalt:" + "-" * 80)
     print(header + "".join(imap(unquote_func, pad_it)))
-    print("-" * 80)
-    print("Seiten-URI fürs Protokoll:")
-    print(edit_uri.format(session.wiki_protocol_uri.format(date=reversed_date)))
-    # geht nicht wegen API restriction (solche Deppen...)
+    logg.info("-" * 80)
+    logg.info("Seiten-URI fürs Protokoll:")
+    logg.info(edit_uri.format(session.wiki_protocol_uri.format(date=reversed_date)))
+    # geht nicht wegen API restriction (solche Deppen... ;))
     #page_uri = "{}/Protokolle/{}".format(session.wiki_protocol_uri, reversed_date)
     #w = mwclient.Site("wiki.piratenpartei.de", "/wiki/")
     #user = raw_input("Wiki-Username: ")
