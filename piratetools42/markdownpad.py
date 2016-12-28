@@ -39,17 +39,21 @@ def replace_special_chars_links(text):
     return text
 
 
-def convert_mediawiki_link_to_markdown(match_obj):
+def convert_mediawiki_link_to_markdown(match_obj, use_plain_links=False):
     link = replace_special_chars_links(match_obj.group(1))
     linktext = replace_special_chars_links(match_obj.group(2))
     if not linktext:
         linktext = link
 
-    return "[{}]({})".format(linktext, link)
+    if use_plain_links:
+        return link
+    else:
+        return "[{}]({})".format(linktext, link)
 
 
-def replace_links(line):
-    return MEDIAWIKI_HYPERLINK.subn(convert_mediawiki_link_to_markdown, line)[0]
+def replace_links(line, use_plain_links=False):
+    convert_link = lambda m: convert_mediawiki_link_to_markdown(m, use_plain_links)
+    return MEDIAWIKI_HYPERLINK.subn(convert_link, line)[0]
 
 
 def detect_indentation(symbol, line):
@@ -92,7 +96,8 @@ def expand_newline(line):
     return [l + "\n" for l in line.split("\n")]
 
 
-def gen_converted_lines(raw_lines):
+def gen_converted_lines(raw_lines, use_plain_links=False):
     # run all conversion / cleanup functions for each line
     for line in raw_lines:
-        yield replace_links(replace_special_chars(fix_enumeration(line.strip())))
+        yield replace_links(replace_special_chars(fix_enumeration(line.strip())), use_plain_links)
+
